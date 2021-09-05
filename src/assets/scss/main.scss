@@ -339,6 +339,7 @@ h3 {
   }
   .label-container {
     margin-top: 10px;
+    padding-left: 12px;
     color: $light-gray;
   }
   &.checked .circle-container::after {
@@ -373,6 +374,7 @@ h3 {
   padding: 12px 0;
   .form-container {
     width: 90%;
+    min-height: 280px;
     margin: 0 auto;
   }
 }
@@ -457,6 +459,8 @@ h3 {
     border: 1px solid $light-gray;
     border-radius: 8px;
     padding: 0 16px;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 .product {
@@ -614,9 +618,13 @@ footer {
     grid-gap: 1rem;
   }
 
+  .cart-panel {
+  width: 100%;
   .cart-container {
+    width: 100%;
     margin-top: 5em;
   }
+}
 
   #footer {
     display: block;

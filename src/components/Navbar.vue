@@ -98,6 +98,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav-container {
+  width: 1100px;
+}
 .nav-tabs,
 .nav-logos,
 .nav-tools {
