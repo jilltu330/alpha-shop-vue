@@ -1,29 +1,28 @@
 <template>
   <div class="btn control d-flex justify-content-between">
-    <button
-      :disabled="this.$route.name === 'address'"
+    <router-link
       class="btn btn-pre"
       id="btn-pre"
-      @click.stop.prevent="previousStep"
-    >
-      上一步
-    </button>
-    <button
+      :to="{ name: previousStep() }"
+      :disabled="this.$route.name === 'address'"
+      >上一步
+    </router-link>
+
+    <router-link
       v-show="this.$route.name !== 'payment'"
       class="btn btn-next"
       id="btn-next"
-      @click.stop.prevent="nextStep"
-    >
-      下一步
-    </button>
-    <button
+      :to="{ name: nextStep() }"
+      >下一步
+    </router-link>
+
+    <router-link
       v-show="this.$route.name === 'payment'"
       class="btn btn-next"
       id="btn-next"
-      @click.stop.prevent="nextStep"
-    >
-      確認訂單
-    </button>
+      :to="{ name: nextStep() }"
+      >確認訂單
+    </router-link>
   </div>
 </template>
 
@@ -32,24 +31,22 @@ export default {
   methods: {
     nextStep() {
       if (this.$route.name === "address") {
-        console.log(this.$route)
-        this.$router.push({ name: "delivery" });
+        return "delivery";
       } else if (this.$route.name === "delivery") {
-        this.$router.push({ name: "payment" });
+        return "payment";
       } else {
         return null;
       }
     },
     previousStep() {
       if (this.$route.name === "payment") {
-        this.$router.push({ name: "delivery" });
+        return "delivery";
       } else if (this.$route.name === "delivery") {
-        this.$router.push({ name: "address" });
+        return "address";
       } else {
         return null;
       }
     },
-    
   },
 };
 </script>

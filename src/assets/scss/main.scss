@@ -520,7 +520,8 @@ h3 {
   .btn {
     text-align: center;
     height: 46px;
-    margin-top: 2em;
+    margin-top: 1em;
+    padding-top: 10px;
     border-radius: 8px;
     font-size: 14px;
     &.btn-next {
@@ -552,7 +553,7 @@ h3 {
 }
 
 footer {
-  // display: none;
+  display: none;
 }
 
 //desktop style
