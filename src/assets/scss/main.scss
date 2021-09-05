@@ -518,6 +518,7 @@ h3 {
   margin: 2em auto;
   width: 100%;
   .btn {
+    text-align: center;
     height: 46px;
     margin-top: 2em;
     border-radius: 8px;
@@ -538,10 +539,14 @@ h3 {
     }
     &.btn-pre {
       font-weight: 500;
+      color:$body-color;
       &::before {
         content: "\2190";
         margin-right: 1rem;
       }
+    }
+    &.btn-pre:disabled {
+      color: $light-gray;
     }
   }
 }
