@@ -1,21 +1,33 @@
 <template>
   <div class="container check-out-container py-5">
-    <section class="stepper-panel">Stepper Panel</section>
-    <section class="form-panel">Form Panel</section>
-    <section class="cart-panel">Cart Panel</section>
-    <section class="contorl-panel">Control Panel</section>
+    <section class="stepper-panel" id="step-control">
+      <Stepper />
+    </section>
+    <section class="form-panel">
+      <router-view></router-view>
+    </section>
+    <section class="cart-panel">
+      <Cart />
+    </section>
+    <section class="control-panel" id="btn-control">
+      <Control />
+    </section>
   </div>
 </template>
 
 <script>
-export default {};
+import Stepper from "./../components/Stepper";
+import Cart from "./../components/Cart";
+import Control from "./../components/Control";
+
+export default {
+  components: {
+    Stepper,
+    Cart,
+    Control,
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-section {
-  border: 1px solid red;
-}
-
-
-
 </style>

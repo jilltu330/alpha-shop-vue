@@ -107,14 +107,27 @@ export default {
   width: 30px;
   height: 30px;
 }
-
 .nav-tool-icon {
   width: 21px;
   height: 21px;
 }
-
 .nav-link {
   font-size: 16px;
 }
-
+a {
+  font-size: 16px;
+  font-weight: 500;
+}
+a:link {
+  color: $body-color;
+}
+a:visited {
+  color: $body-color;
+}
+a:hover {
+  color: $body-color;
+}
+a:active {
+  color: $dark-gray;
+}
 </style>
